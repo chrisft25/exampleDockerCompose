@@ -10,3 +10,9 @@ services:
     stdin_open: true
     tmpfs:
       - /tmp
+  redis:
+    image: redis:3.2-alpine
+    volumes:
+      - "./redis-data:/data"
+    ports:
+      - "6379:6379"
