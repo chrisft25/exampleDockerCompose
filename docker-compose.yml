@@ -10,9 +10,23 @@ services:
     stdin_open: true
     tmpfs:
       - /tmp
+
   redis:
     image: redis:3.2-alpine
     volumes:
       - "./redis-data:/data"
     ports:
       - "6379:6379"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./mysql-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: demo
+    ports:
+      - "3306:3306"
