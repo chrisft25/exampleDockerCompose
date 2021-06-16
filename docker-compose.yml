@@ -35,7 +35,7 @@ services:
     image: mariadb:10.6.1
     restart: always
     volumes:
-      - ./mysql-db:/var/lib/mysql
+      - "./mysql-db:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
