@@ -6,18 +6,29 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8000:8000
+    depends_on:
+      - db
+      - redis
     tty: true
     stdin_open: true
     tmpfs:
       - /tmp
-
+  frontend:
+    build:
+      context: frontend/.
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+    tmpfs:
+      - /tmp
   redis:
     image: redis:3.2-alpine
     volumes:
       - "./redis-data:/data"
     ports:
       - "6379:6379"
-
   db:
     image: mysql:5.7
     restart: always
