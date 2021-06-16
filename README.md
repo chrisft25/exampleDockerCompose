@@ -2,6 +2,10 @@
 <p>
 </p>
 
+## Instructions
+
+- Create 'mysql-data' and 'redis-data' folders.
+- Run docker-compose up
 ## Author
 
 👤 **Christopher Fuentes, Elvis Gómez, Elison González, Ana Ivis Machuca, Mauro Chávez**
