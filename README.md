@@ -4,7 +4,7 @@
 
 ## Instructions
 
-- Create 'mysql-data' and 'redis-data' folders.
+- Create 'mysql-data' and 'redis-data' folders. test
 - Run docker-compose up
 ## Author
 
